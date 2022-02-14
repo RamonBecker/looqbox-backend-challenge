@@ -4,19 +4,63 @@
 ![Looqbox](https://github.com/looqbox/looqbox-backend-challenge/blob/master/logo.png)
 
 ## Challenge
-In this challenge you will need to build a **Microservice** using the stack below and a provided api.
 
-We will not use anything from your project other than evaluate your skills and you are free to use this project in your portfolio.
+First, sorting by the initial letters of the pokemons is performed. Then, the order by length of the pokemon names is performed. If there are pokemon names of equal size, they will be sorted alphabetically.
+
+Just an example response:
+
+```
+{
+    "results": [
+        {
+            "name": "beedrill",
+        },
+        {
+            "name": "blastoise",
+        },
+        {
+            "name": "bulbasaur",
+        },
+        {
+            "name": "butterfree",
+        },
+        {
+            "name": "caterpie",
+        },
+        {
+            "name": "charizard",
+        },
+        {
+            "name": "charmander",
+        },
+        {
+            "name": "charmeleon",
+        },
+    ] 
+}
+
+
+```
+
+## Docker
+
+```
+./gradlew bootjar
+docker build -t looqbox-pokemon-api .     
+docker run -p 8080:8080 looqbox-pokemon-api
+```
+
+## Class diagram 
+
+![classDiagram](https://github.com/RamonBecker/looqbox-backend-challenge/blob/master/diagrams/UML%20Class%20Diagram.png)
+
+
 
 ## Stack
-We use:
 - Java/Kotlin
 - `Spring Boot` for the framework
 - `Gradle` for dependency management and local deployment
 
-## Submitting
-- Make a fork of this repository
-- When you're done send us a pull request
 
 # Guidelines
 You need to make a HTTP REST API that 
@@ -32,14 +76,3 @@ You need to make a HTTP REST API that
   - The queried name was `pi`
   - The highlight object must be ```{"name": "pikachu", "highlight": "<pre>pi</pre>kachu"}``` or ```{"name": "pikachu", "start": 0, "end": 2}```
 - Draw a diagram explaining your architecture
-
-## Bonus points!
-- Design Patterns
-- Unit Testing
-- Dockerize the application
-- Explain the Big-Ω (time complexity) of your sorting algorithms (explain how you calculated them)
-
-## Useful links
-- [Spring Framework](https://spring.io/)
-- [Gradle](https://gradle.org/)
-- [PokeApi docs](https://pokeapi.co/docs/v2.html)
