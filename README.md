@@ -37,6 +37,12 @@ Just an example response:
     ] 
 }
 
+Endpoint:
+
+```
+localhost:8080/pokemon?q
+```
+
 
 ```
 
@@ -73,4 +79,3 @@ You need to make a HTTP REST API that
 - Find a way to indicate the pokemon name highlight regarding the piece of its queried name. For example:
   - The queried name was `pi`
   - The highlight object must be ```{"name": "pikachu", "highlight": "<pre>pi</pre>kachu"}``` or ```{"name": "pikachu", "start": 0, "end": 2}```
-- Draw a diagram explaining your architecture
