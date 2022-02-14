@@ -37,12 +37,12 @@ Just an example response:
     ] 
 }
 
+
+```
 Endpoint:
 
 ```
 localhost:8080/pokemon?q
-```
-
 
 ```
 
